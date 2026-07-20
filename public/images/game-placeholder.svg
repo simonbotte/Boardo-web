@@ -1,0 +1,6 @@
+<svg width="220" height="300" viewBox="0 0 220 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="220" height="300" rx="18" fill="#F5E8D9"/><rect x="13" y="13" width="194" height="274" rx="12" fill="#FFF9F2"/>
+  <path d="M13 210C53 179 83 226 122 196C160 167 178 197 207 174V287H13V210Z" fill="#BEDDAE"/><circle cx="171" cy="66" r="30" fill="#FFCB84"/><path d="M13 128C51 88 83 149 124 105C160 67 183 104 207 74V13H13V128Z" fill="#F4B972"/>
+  <rect x="48" y="93" width="124" height="118" rx="7" fill="#FF7B00"/><rect x="55" y="100" width="110" height="104" rx="5" fill="#E56400"/>
+  <text x="68" y="149" fill="#FFF4E8" font-family="Georgia" font-size="22" font-weight="700">BOARD</text><text x="73" y="175" fill="#FFF4E8" font-family="Georgia" font-size="22" font-weight="700">GAME</text>
+</svg>

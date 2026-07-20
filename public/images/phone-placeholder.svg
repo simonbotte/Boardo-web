@@ -1,0 +1,17 @@
+<svg width="230" height="470" viewBox="0 0 230 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3" y="3" width="224" height="464" rx="38" fill="#181818"/>
+  <rect x="9" y="9" width="212" height="452" rx="32" fill="#FFF7F1"/>
+  <rect x="83" y="16" width="64" height="19" rx="10" fill="#161616"/>
+  <text x="24" y="65" fill="#181818" font-family="Arial" font-size="20" font-weight="700">Boardo</text>
+  <text x="24" y="90" fill="#5A5A5A" font-family="Arial" font-size="11" font-weight="700">FAVORITE GAMES</text>
+  <rect x="24" y="106" width="182" height="126" rx="16" fill="#FFC98B"/>
+  <rect x="36" y="120" width="72" height="94" rx="10" fill="#FF7B00"/>
+  <circle cx="72" cy="161" r="20" fill="#FFF4E8"/>
+  <path d="M72 145L77 157L90 158L80 167L83 180L72 173L61 180L64 167L54 158L67 157L72 145Z" fill="#FF7B00"/>
+  <rect x="118" y="120" width="74" height="94" rx="10" fill="#F7E3CC"/>
+  <rect x="24" y="253" width="182" height="11" rx="5.5" fill="#DFD4CA"/>
+  <rect x="24" y="280" width="88" height="99" rx="14" fill="#BDE7C5"/>
+  <rect x="118" y="280" width="88" height="99" rx="14" fill="#F3C5D7"/>
+  <rect x="24" y="412" width="182" height="30" rx="15" fill="#FFF"/>
+  <circle cx="64" cy="427" r="8" fill="#FF7B00"/><circle cx="115" cy="427" r="8" fill="#E5DDD5"/><circle cx="166" cy="427" r="8" fill="#E5DDD5"/>
+</svg>
