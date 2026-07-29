@@ -15,10 +15,10 @@ const featureCards = computed(() => [
     image: "acropolis-score-entry.webp",
   },
   { name: "playGames", icon: "i-lucide-dices", image: "games.webp" },
-  { name: "stats", icon: "i-lucide-dices", image: "stat-clemence.webp" },
+  { name: "stats", icon: "i-lucide-chart-no-axes-combined", image: "stat-clemence.webp" },
   {
     name: "liveActivities",
-    icon: "i-lucide-dices",
+    icon: "i-lucide-smartphone",
     image: "live-activites.webp",
     imagePosition: "bottom",
   },
