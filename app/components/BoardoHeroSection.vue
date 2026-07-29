@@ -72,6 +72,7 @@ onBeforeUnmount(() => {
             href="https://apps.apple.com/us/app/boardo/id6759225163?itscg=30200&itsct=apps_box_badge&mttnsubad=6759225163"
             style="display: inline-block"
             class="mt-8 w-[200px]"
+            target="_blank"
           >
             <img
               :src="appStoreBadgeSrc"

@@ -43,7 +43,6 @@ onMounted(async () => {
           start: "top 40%",
           toggleActions: "play none none reverse",
         },
-        markers: true,
       });
     }
 
