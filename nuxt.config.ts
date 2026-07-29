@@ -13,6 +13,11 @@ export default defineNuxtConfig({
     fallback: 'light'
   },
 
+  runtimeConfig: {
+    resendApiKey: '',
+    contactEmailFrom: ''
+  },
+
   routeRules: {
     '/': { prerender: true }
   },
