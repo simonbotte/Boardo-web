@@ -73,6 +73,7 @@ onBeforeUnmount(() => {
         data-preview-phone
         :src="`/images/app-screen/${slide}`"
         :alt="`${t('preview.alt')} ${slide}`"
+        :title="`${t('preview.alt')} ${slide}`"
         width="450"
         height="926"
         class="w-full will-change-transform"

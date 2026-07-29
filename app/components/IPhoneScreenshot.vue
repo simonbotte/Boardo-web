@@ -4,8 +4,11 @@ withDefaults(defineProps<{
   src: string
   /** Texte alternatif de la capture. */
   alt?: string
+  /** Infobulle descriptive de la capture. */
+  title?: string
 }>(), {
-  alt: 'Aperçu de l’application'
+  alt: 'Aperçu de l’application',
+  title: ''
 })
 </script>
 
@@ -15,6 +18,7 @@ withDefaults(defineProps<{
       <NuxtImg
         :src="src"
         :alt="alt"
+        :title="title || alt"
         class="block size-full object-cover rounded-[10.5%_/_5.15%]"
       />
     </div>
@@ -22,6 +26,7 @@ withDefaults(defineProps<{
     <NuxtImg
       src="/images/iPhone-frame.png"
       alt=""
+      title=""
       aria-hidden="true"
       class="pointer-events-none col-start-1 row-start-1 block size-full z-10"
     />

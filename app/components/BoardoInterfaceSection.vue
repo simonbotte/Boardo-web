@@ -123,6 +123,7 @@ onBeforeUnmount(() => {
           <IPhoneScreenshot
             :src="`/images/app-screen/${game}-entry-screen.webp`"
             :alt="t(`interface.${game}.title`)"
+            :title="t(`interface.${game}.title`)"
             width="450"
             height="926"
             data-interface-phone

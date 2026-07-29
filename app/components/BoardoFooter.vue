@@ -11,6 +11,7 @@ const { t } = useBoardoLocale();
             <NuxtImg
               src="/images/boardo-iOS-Default-1024x1024@3x.png"
               :alt="t('hero.logoAlt')"
+              :title="t('hero.logoAlt')"
               width="1024"
               height="1024"
               class="size-12 rounded-lg"

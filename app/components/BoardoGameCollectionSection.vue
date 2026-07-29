@@ -112,6 +112,7 @@ onBeforeUnmount(() => {
           :key="`${game}`"
           :src="`/images/games/${game}.jpg`"
           :alt="`${game} ${t('collection.alt')}`"
+          :title="`${game} ${t('collection.alt')}`"
           height="720"
           data-collection-game
           class="h-[200px] w-auto rounded-xl will-change-transform sm:h-[360px]"

@@ -2,14 +2,17 @@ type Locale = "en" | "fr";
 
 const messages = {
   en: {
-    "seo.title": "Boardo — Never lose track of a game score again.",
+    "seo.title": "Boardo — Board Game Score Tracker",
     "seo.description":
-      "Record, calculate, and keep scores for your favorite board games.",
+      "Never lose track of a game score again. Record, calculate, and keep scores for your favorite board games with Boardo.",
+    "seo.keywords":
+      "board game score tracker, scorekeeper, board game scores, game night, score calculator, Boardo",
     "hero.logoAlt": "Boardo logo",
     "hero.title": "Never lose track of a game's score again.",
     "hero.description":
       "Record, calculate, and keep scores for your favorite board games.",
     "hero.download": "Download on the",
+    "hero.downloadApp.title": "Download on the App Store",
     "preview.ariaLabel": "Boardo app previews",
     "preview.alt": "Boardo app preview",
     "collection.badge": "Browse",
@@ -95,14 +98,17 @@ const messages = {
     "contact.generalSubject": "Contact request",
   },
   fr: {
-    "seo.title": "Boardo — Ne perdez plus jamais le score d’une partie.",
+    "seo.title": "Boardo — Compteur de scores de jeux de société",
     "seo.description":
-      "Enregistrez, calculez et conservez les scores de vos jeux de société préférés.",
+      "Ne perdez plus jamais le score d’une partie. Enregistrez, calculez et conservez les scores de vos jeux de société préférés avec Boardo.",
+    "seo.keywords":
+      "compteur de scores jeux de société, score de jeu, calculateur de scores, soirée jeux, Boardo",
     "hero.logoAlt": "Logo Boardo",
     "hero.title": "Ne perdez plus jamais le score d’une partie.",
     "hero.description":
       "Enregistrez, calculez et conservez les scores de vos jeux de société préférés.",
     "hero.download": "Télécharger dans l’",
+    "hero.downloadApp.title": "Télécharger dans l'App Store",
     "preview.ariaLabel": "Aperçus de l’application Boardo",
     "preview.alt": "Aperçu de l’application Boardo",
     "collection.badge": "Parcourir",

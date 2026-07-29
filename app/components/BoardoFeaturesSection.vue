@@ -120,6 +120,7 @@ onBeforeUnmount(() => {
               <IPhoneScreenshot
                 :src="`/images/app-screen/${feature.image}`"
                 :alt="t(`features.${feature.name}.title`)"
+                :title="t(`features.${feature.name}.title`)"
                 class="w-full"
                 :class="
                   feature.imagePosition === 'bottom'

@@ -50,6 +50,7 @@ onBeforeUnmount(() => {
             <NuxtImg
               :src="logoSrc"
               :alt="t('hero.logoAlt')"
+              :title="t('hero.logoAlt')"
               width="1024"
               height="1024"
               class="size-full"
@@ -73,10 +74,16 @@ onBeforeUnmount(() => {
             style="display: inline-block"
             class="mt-8 w-[200px]"
             target="_blank"
+            :title="t('hero.downloadApp.title')"
           >
             <img
               :src="appStoreBadgeSrc"
               :alt="
+                locale === 'fr'
+                  ? 'Télécharger dans l’App Store'
+                  : 'Download on the App Store'
+              "
+              :title="
                 locale === 'fr'
                   ? 'Télécharger dans l’App Store'
                   : 'Download on the App Store'
