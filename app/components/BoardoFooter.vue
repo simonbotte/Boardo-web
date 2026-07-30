@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useBoardoLocale();
+const { locale, t } = useBoardoLocale()
 </script>
 
 <template>
@@ -18,7 +18,36 @@ const { t } = useBoardoLocale();
             />
             <span class="font-display text-xl font-bold">Boardo</span>
           </div>
-          <p class="text-xs text-muted">{{ t("footer.owner") }}</p>
+          <p class="text-xs text-muted">
+            {{ t("footer.owner") }}
+          </p>
+          <nav
+            class="flex items-center gap-2 text-sm"
+            :aria-label="t('locale.selectorLabel')"
+          >
+            <NuxtLink
+              to="/fr"
+              class="font-semibold transition-opacity hover:opacity-100"
+              :class="locale === 'fr' ? 'opacity-100' : 'opacity-50'"
+              :aria-current="locale === 'fr' ? 'page' : undefined"
+            >
+              FR
+            </NuxtLink>
+            <span
+              class="text-muted"
+              aria-hidden="true"
+            >
+              /
+            </span>
+            <NuxtLink
+              to="/en"
+              class="font-semibold transition-opacity hover:opacity-100"
+              :class="locale === 'en' ? 'opacity-100' : 'opacity-50'"
+              :aria-current="locale === 'en' ? 'page' : undefined"
+            >
+              EN
+            </NuxtLink>
+          </nav>
         </div>
         <div class="text-xs leading-relaxed text-muted">
           <p class="max-w-4xl">

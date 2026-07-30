@@ -1,4 +1,6 @@
-type Locale = "en" | "fr";
+export const supportedLocales = ["en", "fr"] as const;
+
+export type Locale = (typeof supportedLocales)[number];
 
 const messages = {
   en: {
@@ -7,6 +9,12 @@ const messages = {
       "Never lose track of a game score again. Record, calculate, and keep scores for your favorite board games with Boardo.",
     "seo.keywords":
       "board game score tracker, scorekeeper, board game scores, game night, score calculator, Boardo",
+    "locale.switchToFrench": "Voir le site en français",
+    "locale.switchToEnglish": "View the website in English",
+    "locale.selectorLabel": "Choose a language",
+    "locale.suggestion.message": "Based on your browser, you seems to prefer English.",
+    "locale.suggestion.action": "View the site in English",
+    "locale.suggestion.dismiss": "Dismiss the language suggestion",
     "hero.logoAlt": "Boardo logo",
     "hero.title": "Never lose track of a game's score again.",
     "hero.description":
@@ -20,18 +28,35 @@ const messages = {
     "collection.alt": "game cover placeholder",
     "interface.badge": "Interface",
     "interface.title": "Tailored for each game",
-    "interface.scoreAlt": "Skull King score screen placeholder",
-    "interface.scoringAlt": "Skull King scoring screen placeholder",
-    "interface.gameAlt": "Skull King game screen placeholder",
-    "interface.description":
-      "Note bids before the round and fold at the end to automatically compute points.",
+    "interface.skull-king.title": "Skull King",
+    "interface.skull-king.imageAlt": "Boardo interface for Skull King",
+    "interface.skull-king.description":
+      "Enter bids before each round, then tricks won. Boardo automatically calculates scores, applies bonuses, and keeps track of every round.",
+    "interface.7-wonders.title": "7 Wonders",
+    "interface.7-wonders.imageAlt": "Boardo interface for 7 Wonders",
+    "interface.7-wonders.description":
+      "Enter each scoring category for every player, then let Boardo automatically calculate the final score and identify the winner.",
+    "interface.pixies.title": "Pixies",
+    "interface.pixies.imageAlt": "Boardo interface for Pixies",
+    "interface.pixies.description":
+      "Validate numbered cards, enter symbols and the largest color area after each round. Boardo automatically calculates scores and every player's final total.",
     "features.badge": "Many",
     "features.title": "Features to enjoy most of your games",
-    "features.addFriends": "Add your friends",
-    "features.saveScores": "Save every score",
-    "features.playGames": "Play your games",
-    "features.description":
-      "Everything you need to keep your next board game night on track.",
+    "features.addFriends.title": "Bring your players together",
+    "features.addFriends.description":
+      "Add your friends once, then rebuild your table in seconds for every new game night.",
+    "features.saveScores.title": "Track every score",
+    "features.saveScores.description":
+      "Enter points easily and keep a clear view of the standings throughout the game.",
+    "features.playGames.title": "Play your games",
+    "features.playGames.description":
+      "Every game has its own interface and scoring rules, so you can play without calculations or hassle.",
+    "features.stats.title": "Relive your games",
+    "features.stats.description":
+      "Browse your history, statistics and score progress to find out who really rules the table.",
+    "features.liveActivities.title": "Keep the score within reach",
+    "features.liveActivities.description":
+      "Follow the game from your Lock Screen and Dynamic Island with iPhone Live Activities.",
     "features.altSuffix": "placeholder",
     "pricing.badge": "Pricing",
     "pricing.title": "Play your way",
@@ -103,6 +128,12 @@ const messages = {
       "Ne perdez plus jamais le score d’une partie. Enregistrez, calculez et conservez les scores de vos jeux de société préférés avec Boardo.",
     "seo.keywords":
       "compteur de scores jeux de société, score de jeu, calculateur de scores, soirée jeux, Boardo",
+    "locale.switchToFrench": "Voir le site en français",
+    "locale.switchToEnglish": "View the website in English",
+    "locale.selectorLabel": "Choisir une langue",
+    "locale.suggestion.message": "Based on your browser, you seems to prefer English.",
+    "locale.suggestion.action": "See the site in English",
+    "locale.suggestion.dismiss": "Fermer la suggestion de langue",
     "hero.logoAlt": "Logo Boardo",
     "hero.title": "Ne perdez plus jamais le score d’une partie.",
     "hero.description":
@@ -218,25 +249,24 @@ const messages = {
 
 type MessageKey = keyof typeof messages.en;
 
-function browserUsesFrench() {
-  const browserLanguages = navigator.languages?.length
-    ? navigator.languages
-    : [navigator.language];
+export function isSupportedLocale(value: unknown): value is Locale {
+  return typeof value === "string" && supportedLocales.includes(value as Locale);
+}
 
-  return browserLanguages.some((language) =>
-    language.toLowerCase().startsWith("fr")
-  );
+export function useLocalePreference() {
+  return useCookie<Locale | null>('boardo-preferred-locale', {
+    default: () => null,
+    maxAge: 60 * 60 * 24 * 30
+  })
 }
 
 export function useBoardoLocale() {
-  // English is kept for SSR so prerendered pages hydrate consistently.
   const locale = useState<Locale>("boardo-locale", () => "en");
-
-  onMounted(() => {
-    locale.value = browserUsesFrench() ? "fr" : "en";
-  });
-
   const t = (key: MessageKey) => messages[locale.value][key];
 
-  return { locale, t };
+  const setLocale = (value: Locale) => {
+    locale.value = value;
+  };
+
+  return { locale, setLocale, t };
 }

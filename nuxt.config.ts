@@ -15,11 +15,16 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     resendApiKey: '',
-    contactEmailFrom: ''
+    contactEmailFrom: '',
+    public: {
+      siteUrl: 'https://boardo.app'
+    }
   },
 
   routeRules: {
-    '/': { prerender: true }
+    '/en': { prerender: true },
+    '/fr': { prerender: true },
+    '/sitemap.xml': { prerender: true }
   },
 
   compatibilityDate: '2026-06-30',

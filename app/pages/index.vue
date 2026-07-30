@@ -1,18 +1,8 @@
 <script setup lang="ts">
-definePageMeta({
-  colorMode: "light",
-});
-</script>
+const preferredLocale = useLocalePreference()
+const destination = isSupportedLocale(preferredLocale.value)
+  ? `/${preferredLocale.value}`
+  : '/fr'
 
-<template>
-  <div class="overflow-hidden bg-default text-default">
-    <BoardoHeroSection />
-    <BoardoAppPreviewSection />
-    <BoardoGameCollectionSection />
-    <BoardoInterfaceSection />
-    <BoardoFeaturesSection />
-    <BoardoPricingSection v-if="1 === 2" />
-    <BoardoContactSection />
-    <BoardoFooter />
-  </div>
-</template>
+await navigateTo(destination, { redirectCode: 302 })
+</script>
