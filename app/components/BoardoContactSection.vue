@@ -297,6 +297,16 @@ async function submit() {
               />
             </UFormField>
 
+            <p class="text-xs leading-relaxed text-muted">
+              {{ t('contact.privacyNotice') }}
+              <NuxtLink
+                :to="`/${locale}/legal`"
+                class="font-semibold text-primary underline underline-offset-4"
+              >
+                {{ t('contact.privacyPolicyLink') }}
+              </NuxtLink>.
+            </p>
+
             <div class="flex justify-end pt-1">
               <UButton
                 type="submit"

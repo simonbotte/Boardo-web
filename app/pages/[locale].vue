@@ -10,6 +10,7 @@ if (!isSupportedLocale(routeLocale)) {
 
 const { setLocale } = useBoardoLocale()
 const preferredLocale = useLocalePreference()
+const isLocaleIndex = computed(() => route.name === 'locale')
 setLocale(routeLocale)
 preferredLocale.value = routeLocale
 
@@ -19,13 +20,14 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="overflow-hidden bg-default text-default">
+  <NuxtPage v-if="!isLocaleIndex" />
+  <div v-else class="overflow-hidden bg-default text-default">
     <BoardoHeroSection />
     <BoardoAppPreviewSection />
     <BoardoGameCollectionSection />
     <BoardoInterfaceSection />
     <BoardoFeaturesSection />
-    <BoardoPricingSection v-if="1 === 2" />
+    <BoardoPricingSection />
     <BoardoContactSection />
     <BoardoFooter />
   </div>

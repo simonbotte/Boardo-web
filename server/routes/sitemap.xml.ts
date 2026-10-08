@@ -1,7 +1,7 @@
 export default defineEventHandler((event) => {
   const config = useRuntimeConfig()
   const siteUrl = config.public.siteUrl.replace(/\/$/, '')
-  const urls = ['/fr', '/en']
+  const urls = ['/fr', '/en', '/fr/comparison', '/en/comparison', '/fr/legal', '/en/legal']
 
   setHeader(event, 'content-type', 'application/xml; charset=UTF-8')
 

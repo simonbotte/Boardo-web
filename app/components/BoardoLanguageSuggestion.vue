@@ -50,7 +50,7 @@ function selectEnglish() {
               {{ t("locale.suggestion.action") }}
             </UButton>
             <UButton
-              class="absolute top-0.75 right-0 p-0 sm:relative"
+              class="absolute top-0.75 right-0 p-0 sm:relative sm:top-0 sm:right-0"
               color="neutral"
               variant="link"
               icon="i-lucide-x"

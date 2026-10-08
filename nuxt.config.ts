@@ -24,6 +24,10 @@ export default defineNuxtConfig({
   routeRules: {
     '/en': { prerender: true },
     '/fr': { prerender: true },
+    '/en/comparison': { prerender: true },
+    '/fr/comparison': { prerender: true },
+    '/en/legal': { prerender: true },
+    '/fr/legal': { prerender: true },
     '/sitemap.xml': { prerender: true }
   },
 
