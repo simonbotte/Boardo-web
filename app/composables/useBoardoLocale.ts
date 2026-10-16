@@ -84,24 +84,24 @@ const messages = {
       "Play without ads between your games.",
     "pricing.plansTitle": "Choose your plan",
     "pricing.plansDescription":
-      "Every Boardo Ultra plan starts with a 7-day free trial.",
+      "Eligible new subscribers can try Boardo Ultra free for 7 days. Prices shown are for France; the price and trial eligibility displayed in the App Store apply.",
     "pricing.plan.annual.title": "Annual",
-    "pricing.plan.annual.price": "€10",
+    "pricing.plan.annual.price": "€9.99",
     "pricing.plan.annual.period": "/ year",
     "pricing.plan.monthly.title": "Monthly",
     "pricing.plan.monthly.price": "€0.99",
     "pricing.plan.monthly.period": "/ month",
     "pricing.bestValue": "Best value",
-    "pricing.trial": "7 days free",
+    "pricing.trial": "7 days free if eligible",
     "pricing.cancelAnytime":
       "Then renews automatically at this price. Cancel at least 24 hours before renewal.",
-    "pricing.ctaTitle": "Start your free trial in Boardo",
+    "pricing.ctaTitle": "Discover Boardo Ultra in the app",
     "pricing.ctaDescription":
-      "Download Boardo and choose Boardo Ultra to begin your 7-day free trial.",
+      "Download Boardo and choose Boardo Ultra. A 7-day free trial is available to eligible new subscribers.",
     "pricing.restore":
       "Already subscribed? Open Boardo Ultra in the app and tap Restore purchases.",
     "pricing.legal":
-      "Payment is charged to your Apple Account after the free trial. Your subscription renews automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel it in your App Store account settings.",
+      "Payment is charged to your Apple Account when you confirm your purchase, or at the end of an eligible free trial. Your subscription renews automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel it in your App Store account settings.",
     "comparison.badge": "Comparison",
     "comparison.title": "Boardo compared with the established score trackers",
     "comparison.description":
@@ -304,24 +304,24 @@ const messages = {
       "Jouez sans publicité entre vos parties.",
     "pricing.plansTitle": "Choisissez votre formule",
     "pricing.plansDescription":
-      "Chaque formule Boardo Ultra commence par 7 jours d’essai gratuit.",
+      "Les nouveaux abonnés éligibles peuvent essayer Boardo Ultra gratuitement pendant 7 jours. Les prix indiqués sont ceux de la France ; le prix et l’éligibilité à l’essai affichés dans l’App Store font foi.",
     "pricing.plan.annual.title": "Annuel",
-    "pricing.plan.annual.price": "10 €",
+    "pricing.plan.annual.price": "9,99 €",
     "pricing.plan.annual.period": "/ an",
     "pricing.plan.monthly.title": "Mensuel",
     "pricing.plan.monthly.price": "0,99 €",
     "pricing.plan.monthly.period": "/ mois",
     "pricing.bestValue": "Meilleure offre",
-    "pricing.trial": "7 jours gratuits",
+    "pricing.trial": "7 jours gratuits si éligible",
     "pricing.cancelAnytime":
       "Puis renouvellement automatique à ce tarif. Résiliez au moins 24 heures avant le renouvellement.",
-    "pricing.ctaTitle": "Commencez votre essai gratuit dans Boardo",
+    "pricing.ctaTitle": "Découvrez Boardo Ultra dans l’app",
     "pricing.ctaDescription":
-      "Téléchargez Boardo et choisissez Boardo Ultra pour profiter de vos 7 jours d’essai.",
+      "Téléchargez Boardo et choisissez Boardo Ultra. Les nouveaux abonnés éligibles bénéficient de 7 jours d’essai gratuit.",
     "pricing.restore":
       "Déjà abonné·e ? Ouvrez Boardo Ultra dans l’app et touchez Restaurer les achats.",
     "pricing.legal":
-      "Après l’essai gratuit, le paiement sera prélevé sur votre compte Apple. L’abonnement est reconduit automatiquement, sauf annulation au moins 24 heures avant la fin de la période en cours. Gérez ou résiliez votre abonnement dans les réglages de votre compte App Store.",
+      "Le paiement est prélevé sur votre compte Apple lors de la confirmation de l’achat, ou à la fin d’un essai gratuit éligible. L’abonnement est reconduit automatiquement, sauf annulation au moins 24 heures avant la fin de la période en cours. Gérez ou résiliez votre abonnement dans les réglages de votre compte App Store.",
     "comparison.badge": "Comparatif",
     "comparison.title": "Boardo face aux compteurs de score reconnus",
     "comparison.description":
@@ -495,7 +495,7 @@ function getBoardoLegalContent(locale: Locale) {
             id: 'purchases',
             title: 'Abonnements et achats intégrés Apple',
             paragraphs: [
-              'Boardo Ultra est proposé sous forme d’abonnements à renouvellement automatique gérés par Apple via StoreKit et l’App Store. Il débloque notamment les joueurs récurrents, l’historique et les statistiques, et supprime les publicités. En France, les offres actuellement présentées sont de 0,99 € par mois ou 10 € par an, chacune avec un essai gratuit de 7 jours lorsqu’il est proposé et que vous y êtes éligible. Le prix, la durée, l’essai applicable et le montant du renouvellement affichés par l’App Store avant la confirmation de l’achat prévalent ; ils peuvent varier selon le pays et l’offre.',
+              'Boardo Ultra est proposé sous forme d’abonnements à renouvellement automatique gérés par Apple via StoreKit et l’App Store. Il débloque notamment les joueurs récurrents, l’historique et les statistiques, et supprime les publicités. En France, les offres actuellement présentées sont de 0,99 € par mois ou 9,99 € par an, chacune avec un essai gratuit de 7 jours lorsqu’il est proposé et que vous y êtes éligible. Le prix, la durée, l’essai applicable et le montant du renouvellement affichés par l’App Store avant la confirmation de l’achat prévalent ; ils peuvent varier selon le pays et l’offre.',
               'À la fin de l’essai, l’abonnement est reconduit automatiquement au prix affiché pour la période choisie et le paiement est débité du compte Apple. Pour empêcher le prélèvement après l’essai ou le prochain renouvellement, résiliez au moins 24 heures avant la fin de la période concernée. Vous pouvez gérer ou résilier l’abonnement dans les réglages de votre compte Apple. La restauration des achats est disponible dans l’app. Apple traite le paiement ; Boardo ne reçoit pas les coordonnées de paiement. L’app ne reçoit de StoreKit que les informations nécessaires à la vérification du droit d’accès et à l’activation des fonctionnalités, sur le fondement de l’exécution de l’abonnement. Apple conserve les informations de transaction selon ses règles et obligations propres, notamment pour la facturation et la conformité légale.',
             ]
           },
@@ -573,7 +573,7 @@ function getBoardoLegalContent(locale: Locale) {
             id: 'purchases',
             title: 'Apple subscriptions and in-app purchases',
             paragraphs: [
-              'Boardo Ultra is offered as auto-renewing subscriptions managed by Apple through StoreKit and the App Store. It unlocks recurring players, history and statistics, and removes advertising. In France, the offers currently shown are €0.99 per month or €10 per year, each with a 7-day free trial when offered and when you are eligible. The price, duration, applicable trial, and renewal amount shown by the App Store before you confirm your purchase take precedence and may vary by country and offer.',
+              'Boardo Ultra is offered as auto-renewing subscriptions managed by Apple through StoreKit and the App Store. It unlocks recurring players, history and statistics, and removes advertising. In France, the offers currently shown are €0.99 per month or €9.99 per year, each with a 7-day free trial when offered and when you are eligible. The price, duration, applicable trial, and renewal amount shown by the App Store before you confirm your purchase take precedence and may vary by country and offer.',
               'After the trial, the subscription automatically renews at the price shown for the selected period, with payment charged to your Apple Account. To prevent a charge after the trial or the next renewal, cancel at least 24 hours before the relevant period ends. Manage or cancel in your Apple Account settings. You can restore purchases in the app. Apple processes payment; Boardo does not receive payment card details. The app receives only the StoreKit information needed to verify subscription access and unlock features, on the basis of providing the subscription. Apple retains transaction information according to its own policies and legal obligations, including billing and compliance requirements.'
             ]
           },

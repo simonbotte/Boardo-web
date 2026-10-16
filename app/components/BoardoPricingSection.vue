@@ -257,6 +257,9 @@ onBeforeUnmount(() => {
           <h3 class="font-display text-2xl font-bold text-highlighted sm:text-3xl">
             {{ t('pricing.plansTitle') }}
           </h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted">
+            {{ t('pricing.plansDescription') }}
+          </p>
         </div>
 
         <div class="mx-auto mt-7 grid max-w-3xl gap-4 sm:grid-cols-2">
